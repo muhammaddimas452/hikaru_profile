@@ -67,13 +67,13 @@ const footer = () => {
           </a>
         </div>
         <div className="flex font-urbanist font-normal text-base sm:justify-items-end ssm:justify-items-center ssm:mt-4 sm:mt-0 lg:gap-x-12 md:gap-x-8 ssm:gap-x-1">
-          <div className="">
+          <div className="transition ease-in-out delay-100 hover:-translate-y-2 duration-500">
             <a href="">Privacy policy</a>
           </div>
-          <div className="">
+          <div className="transition ease-in-out delay-100 hover:-translate-y-2 duration-500">
             <a href="">Terms of service</a>
           </div>
-          <div className="">
+          <div className="transition ease-in-out delay-100 hover:-translate-y-2 duration-500">
             <a href="">FAQ`s</a>
           </div>
         </div>

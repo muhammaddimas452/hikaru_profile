@@ -6,10 +6,10 @@ const about = () => {
   return (
     <div>
       <div className="grid md:grid-cols-2 items-center gap-x-10 ssm:grid-cols-1 ssm:justify-items-center lg:justify-items-start px-20 ssm:py-6 sm:py-8 sm:gap-y-12 ssm:gap-y-14 md:py-[80px]">
-        <div>
+        <div data-aos="fade-right">
           <img src={Group2} alt="" />
         </div>
-        <div className="text-white">
+        <div data-aos="fade-left" className="text-white">
           <div className="lg:w-[583px]">
             <img className="justify-self-end" src={Burts} alt="" />
             <h1 className="uppercase clash-display-medium ssm:text-[32px] md:text-[42px] lg:text-[48px]">
@@ -21,7 +21,7 @@ const about = () => {
             handling website design projects. I really trust my skills to make
             clean, minimalist, and unique designs.
           </span>
-          <button className="flex items-center mt-6 clash-display-regular ssm:text-sm md:text-base gap-x-3 ssm:px-7 ssm:py-[14px] md:px-8 md:py-[18px] bg-[#7A0BC0] ssm:rounded-2xl md:rounded-3xl">
+          <button className="flex items-center mt-6 clash-display-regular shadow-xl shadow-[#7A0BC0]/50 ssm:text-sm md:text-base gap-x-3 ssm:px-7 ssm:py-[14px] md:px-8 md:py-[18px] bg-[#7A0BC0] hover:bg-gradient-to-r hover:from-[#4C0578] hover:to-[#7A0BC0] ssm:rounded-2xl md:rounded-3xl">
             Download CV <img src={Download} alt="" />
           </button>
         </div>

@@ -25,16 +25,16 @@ const testimonial = () => {
   };
   return (
     <div className="ssm:py-6 sm:py-8 md:py-[80px] grid grid-cols-1">
-      <div className="grid justify-items-center">
+      <div data-aos="zoom-in" className="grid justify-items-center">
         <h1 className="uppercase ssm:w-[70%] md:w-[586px] text-white text-center clash-display-medium ssm:text-4xl sm:text-5xl">
           Client satisfaction is our priority
         </h1>
       </div>
       <div className="py-12">
         <Carousel responsive={responsive} infinite={true}>
-          <div className="">
+          <div data-aos="zoom-in" className="">
             <img
-              className="ssm:w-full sm:w-[480px] h-[420px]"
+              className="ssm:w-full sm:w-[430px] h-[420px]"
               src={Testbg}
               alt=""
             />
@@ -57,9 +57,9 @@ const testimonial = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div data-aos="zoom-in" className="">
             <img
-              className="ssm:w-full sm:w-[480px] h-[420px]"
+              className="ssm:w-full sm:w-[430px] h-[420px]"
               src={Testbg}
               alt=""
             />
@@ -82,9 +82,9 @@ const testimonial = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div data-aos="zoom-in" className="">
             <img
-              className="ssm:w-full sm:w-[480px] h-[420px]"
+              className="ssm:w-full sm:w-[430px] h-[420px]"
               src={Testbg}
               alt=""
             />
@@ -107,9 +107,9 @@ const testimonial = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div data-aos="zoom-in" className="">
             <img
-              className="ssm:w-full sm:w-[480px] h-[420px]"
+              className="ssm:w-full sm:w-[430px] h-[420px]"
               src={Testbg}
               alt=""
             />
