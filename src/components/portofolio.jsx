@@ -10,7 +10,7 @@ const portofolio = () => {
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-10 ssm:grid-cols-1 ssm:justify-items-center lg:justify-items-start ssm:px-8 md:px-10 lg:px-20 ssm:py-6 sm:py-8 sm:gap-y-12 ssm:gap-y-14 md:py-[80px]">
       <div
         data-aos="fade-right"
-        className="text-white ssm:justify-items-center md:justify-items-start"
+        className="grid grid-cols-1 ssm:justify-items-center content-start lg:justify-items-start text-white "
       >
         <h1 className="uppercase clash-display-medium ssm:text-4xl sm:text-5xl md:text-[64px]">
           My Best Project
