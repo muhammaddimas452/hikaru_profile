@@ -2,25 +2,15 @@
 import Logo from "../assets/img/Logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Group1 from "../assets/img/Group 1.png";
 
 const nav = () => {
-  const [nav, setNav] = useState(false);
-  const [isScroll, setIsScroll] = useState(false);
-  useEffect(() => {
-    const handlerScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
-    };
-    window.addEventListener("scroll", handlerScroll);
-    return () => {
-      window.removeEventListener("scroll", handlerScroll);
-    };
-  }, []);
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setMobileDrawerOpen(!mobileDrawerOpen);
+  };
 
   return (
     <nav className="">
@@ -55,50 +45,47 @@ const nav = () => {
           <img src={Logo} alt="" />
           <span>Nexidigital</span>
         </div>
-        <div className="ssm:block lg:hidden">
-          <RiMenu3Line
-            onClick={() => setNav((prev) => !prev)}
-            className="cursor-pointer text-4xl"
-          />
+        <div className="lg:hidden md:flex flex-col justify-center">
+          <button onClick={toggleNavbar}>
+            {mobileDrawerOpen ? (
+              <IoClose className="text-3xl" />
+            ) : (
+              <RiMenu3Line className="text-3xl" />
+            )}
+          </button>
         </div>
       </div>
-      <div
-        className={`${
-          nav ? "right-0" : "-right-full"
-        } w-full md:w-[50%]  bg-[#03001c] z-40 text-white h-screen absolute  top-0 p-8 block md:hidden`}
-      >
-        <IoClose
-          className="text-4xl mb-3"
-          onClick={() => setNav((prev) => !prev)}
-        />
-        <ul>
-          <li className="flex flex-col gap-5">
-            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-              Home
-            </a>
-          </li>
-          <li className="flex flex-col  gap-5">
-            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-              Contribution
-            </a>
-          </li>
-          <li className="flex flex-col  gap-5">
-            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-              Our Mission
-            </a>
-          </li>
-          <li className="flex flex-col  gap-5">
-            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-              Projects
-            </a>
-          </li>
-          <li className="flex flex-col  gap-5">
-            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </div>
+      {mobileDrawerOpen && (
+        <div className="fixed right-0 z-20 w-full overflow-hidden bg-[#03001c] text-white h-screen block md:hidden">
+          <ul>
+            <li className="flex flex-col gap-5">
+              <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+                Home
+              </a>
+            </li>
+            <li className="flex flex-col  gap-5">
+              <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+                Contribution
+              </a>
+            </li>
+            <li className="flex flex-col  gap-5">
+              <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+                Our Mission
+              </a>
+            </li>
+            <li className="flex flex-col  gap-5">
+              <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+                Projects
+              </a>
+            </li>
+            <li className="flex flex-col  gap-5">
+              <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
       <></>
     </nav>
   );
