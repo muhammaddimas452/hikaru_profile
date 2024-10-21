@@ -2,7 +2,7 @@
   "name": "projek_2",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://muhammaddimas452.github.io/hikaru_profile/",
+  "homepage": "https://muhammaddimas452.github.io/hikaru_profile/",
   "type": "module",
   "scripts": {
     "dev": "vite",
