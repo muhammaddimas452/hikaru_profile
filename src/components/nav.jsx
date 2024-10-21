@@ -1,19 +1,26 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Logo from "../assets/img/Logo.png";
-import Group1 from "../assets/img/Group 1.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Group1 from "../assets/img/Group 1.png";
 
 const nav = () => {
   const [nav, setNav] = useState(false);
-
-  function openMenu() {
-    setNav(true);
-  }
-  function closeMenu() {
-    setNav(false);
-  }
+  const [isScroll, setIsScroll] = useState(false);
+  useEffect(() => {
+    const handlerScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+    window.addEventListener("scroll", handlerScroll);
+    return () => {
+      window.removeEventListener("scroll", handlerScroll);
+    };
+  }, []);
 
   return (
     <nav className="">
@@ -49,37 +56,50 @@ const nav = () => {
           <span>Nexidigital</span>
         </div>
         <div className="ssm:block lg:hidden">
-          {nav ? (
-            <IoClose onClick={closeMenu} className="cursor-pointer text-4xl" />
-          ) : (
-            <RiMenu3Line
-              onClick={openMenu}
-              className="cursor-pointer text-4xl"
-            />
-          )}
+          <RiMenu3Line
+            onClick={() => setNav((prev) => !prev)}
+            className="cursor-pointer text-4xl"
+          />
         </div>
       </div>
-      {nav ? (
-        <div className="flex-col ssm:block lg:hidden gap-4 ssm:pt-1 md:pt-5 px-5 text-white absolute delay-1000 top-[12%] right-0 w-full">
-          <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-            Home
-          </a>
-          <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-            Contribution
-          </a>
-          <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-            Our Mission
-          </a>
-          <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-            Projects
-          </a>
-          <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
-            Contact Us
-          </a>
-        </div>
-      ) : (
-        <></>
-      )}
+      <div
+        className={`${
+          nav ? "right-0" : "-right-full"
+        } w-full md:w-[50%]  bg-[#03001c] z-40 text-white h-screen absolute  top-0 p-8 block md:hidden`}
+      >
+        <IoClose
+          className="text-4xl mb-3"
+          onClick={() => setNav((prev) => !prev)}
+        />
+        <ul>
+          <li className="flex flex-col gap-5">
+            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+              Home
+            </a>
+          </li>
+          <li className="flex flex-col  gap-5">
+            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+              Contribution
+            </a>
+          </li>
+          <li className="flex flex-col  gap-5">
+            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+              Our Mission
+            </a>
+          </li>
+          <li className="flex flex-col  gap-5">
+            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+              Projects
+            </a>
+          </li>
+          <li className="flex flex-col  gap-5">
+            <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <></>
     </nav>
   );
 };
