@@ -18,11 +18,13 @@ const hero = () => {
               website with a modern interface design
             </span>
           </div>
-          <button className="flex items-center mt-6 ssm:justify-self-center lg:justify-self-start clash-display-regular ssm:text-sm md:text-base gap-x-2 ssm:px-7 ssm:py-[14px] md:px-8 md:py-[18px] bg-[#7A0BC0] ssm:rounded-2xl md:rounded-3xl">
-            Connect With Me <BsArrowRight className="text-3xl" />
-          </button>
-          <div className="mt-14 md:w-fit ssm:w-[80%] ssm:justify-self-center lg:justify-self-start">
-            <img src={Image} alt="" />
+          <div className="grid grid-cols-1 ssm:justify-items-center lg:justify-items-start">
+            <button className="flex items-center  mt-6 clash-display-regular ssm:text-sm md:text-base gap-x-2 ssm:px-7 ssm:py-[14px] md:px-8 md:py-[18px] bg-[#7A0BC0] ssm:rounded-2xl md:rounded-3xl">
+              Connect With Me <BsArrowRight className="text-3xl" />
+            </button>
+            <div className="mt-14 md:w-fit ssm:w-[80%]">
+              <img src={Image} alt="" />
+            </div>
           </div>
         </div>
         <div className="lg:w-fit md:w-[70%] ssm:w-[80%] text-center">
