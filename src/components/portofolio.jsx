@@ -12,7 +12,7 @@ const portofolio = () => {
         data-aos="fade-right"
         className="grid grid-cols-1 ssm:justify-items-center content-start lg:justify-items-start text-white "
       >
-        <h1 className="uppercase clash-display-medium text-center ssm:text-4xl sm:text-5xl md:text-[64px]">
+        <h1 className="uppercase clash-display-medium text-center lg:text-start ssm:text-4xl sm:text-5xl md:text-[64px]">
           My Best Project
         </h1>
         <button className="flex items-center mt-6 clash-display-regular shadow-xl shadow-[#7A0BC0]/50 ssm:text-sm md:text-base gap-x-3 ssm:px-7 ssm:py-[14px] md:px-8 md:py-[18px] bg-[#7A0BC0] hover:bg-gradient-to-r hover:from-[#4C0578] hover:to-[#7A0BC0] ssm:rounded-2xl md:rounded-3xl">

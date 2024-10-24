@@ -34,7 +34,7 @@ const testimonial = () => {
         <Carousel responsive={responsive} infinite={true}>
           <div data-aos="zoom-in" className="">
             <img
-              className="ssm:w-full sm:w-[430px] h-[420px]"
+              className="ssm:w-full sm:w-[470px] h-[420px]"
               src={Testbg}
               alt=""
             />
@@ -59,7 +59,7 @@ const testimonial = () => {
           </div>
           <div data-aos="zoom-in" className="">
             <img
-              className="ssm:w-full sm:w-[430px] h-[420px]"
+              className="ssm:w-full sm:w-[470px] h-[420px]"
               src={Testbg}
               alt=""
             />
@@ -84,7 +84,7 @@ const testimonial = () => {
           </div>
           <div data-aos="zoom-in" className="">
             <img
-              className="ssm:w-full sm:w-[430px] h-[420px]"
+              className="ssm:w-full sm:w-[470px] h-[420px]"
               src={Testbg}
               alt=""
             />
@@ -109,7 +109,7 @@ const testimonial = () => {
           </div>
           <div data-aos="zoom-in" className="">
             <img
-              className="ssm:w-full sm:w-[430px] h-[420px]"
+              className="ssm:w-full sm:w-[470px] h-[420px]"
               src={Testbg}
               alt=""
             />

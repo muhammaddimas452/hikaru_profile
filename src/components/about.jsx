@@ -10,7 +10,7 @@ const about = () => {
           <img src={Group2} alt="" />
         </div>
         <div data-aos="fade-left" className="text-white">
-          <div className="lg:w-[583px]">
+          <div className="lg:w-[383px]">
             <img className="justify-self-end" src={Burts} alt="" />
             <h1 className="uppercase clash-display-medium ssm:text-[32px] md:text-[42px] lg:text-[48px]">
               transforming your digital dream into reality

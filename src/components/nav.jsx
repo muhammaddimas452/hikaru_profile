@@ -45,7 +45,7 @@ const nav = () => {
           <img src={Logo} alt="" />
           <span>Nexidigital</span>
         </div>
-        <div className="lg:hidden md:flex flex-col justify-center">
+        <div className=" justify-center">
           <button onClick={toggleNavbar}>
             {mobileDrawerOpen ? (
               <IoClose className="text-3xl" />
@@ -56,7 +56,7 @@ const nav = () => {
         </div>
       </div>
       {mobileDrawerOpen && (
-        <div className="fixed right-0 z-20 w-full overflow-hidden bg-[#03001c] text-white h-screen block md:hidden">
+        <div className="fixed right-0 z-20 w-full overflow-hidden bg-[#03001c] text-white h-screen block lg:hidden">
           <ul>
             <li className="flex flex-col gap-5">
               <a className="flex helveticalNeue  hover:opacity-100 uppercase px-3 py-2 bg-[#03001C] border-y-[1px] border-[#828282] items-center">
